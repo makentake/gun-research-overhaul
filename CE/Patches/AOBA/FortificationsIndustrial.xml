@@ -68,6 +68,20 @@
                         </researchPrerequisites>
                     </value>
                 </li>
+
+                <!-- heavy weapons -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FT_TurretHexMortar" or
+                    defName="FT_TurretPrince" or
+                    defName="FT_TurretEmpero"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Mortars</li>
+                            <li>CE_TurretHeavyWeapons</li>
+                            <li>Snek_HighCaliber</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
