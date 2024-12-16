@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fortification Industrial - Citadel</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- reassigning researches -->
+                <!-- "bunker" -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_Bunker_Turret"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Snek_AmmoBelts</li>
+                            <li>FTC_PermanentBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_Autocannon_Bunker"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>CE_TurretHeavyWeapons</li>
+                            <li>Snek_HighCaliber</li>
+                            <li>Snek_AmmoBelts</li>
+                            <li>FTC_PermanentBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_AntiTank_Turret" or
+                    defName="FTC_Batterey_Turret" or
+                    defName="FTC_Wall_Howitzer"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Mortars</li>
+                            <li>CE_TurretHeavyWeapons</li>
+                            <li>Snek_HighCaliber</li>
+                            <li>FTC_TurretBunker</li>
+			                <li>FTC_PermanentBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_SpotterBunker"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Mortars</li>
+			                <li>FTC_PermanentBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_Mortar_Bunker"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Mortars</li>
+			                <li>FTC_PermanentBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
