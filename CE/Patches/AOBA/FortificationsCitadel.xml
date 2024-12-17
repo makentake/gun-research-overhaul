@@ -10,7 +10,8 @@
                 <!-- reassigning researches -->
                 <!-- "bunker" -->
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="FTC_Bunker_Turret"]/researchPrerequisites</xpath>
+                    <xpath>Defs/ThingDef[defName="FTC_Bunker_Turret" or
+                    defName="FTC_Wall_MG"]/researchPrerequisites</xpath>
                     <value>
                         <researchPrerequisites>
                             <li>Snek_AmmoBelts</li>
@@ -57,6 +58,26 @@
                     <value>
                         <researchPrerequisites>
                             <li>Mortars</li>
+			                <li>FTC_PermanentBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_Wall_Flame"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Snek_FlameThrowers</li>
+			                <li>FTC_PermanentBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_Wall_AT"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Mortars</li>
+                            <li>CE_TurretHeavyWeapons</li>
+                            <li>Snek_HighCaliber</li>
 			                <li>FTC_PermanentBunker</li>
                         </researchPrerequisites>
                     </value>
