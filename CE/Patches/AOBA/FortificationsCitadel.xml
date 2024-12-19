@@ -82,6 +82,38 @@
                         </researchPrerequisites>
                     </value>
                 </li>
+
+                <!-- 'guns' -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_Katyusha_Turret"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>CE_Launchers</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+
+                <!-- 'turret' -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_TwinMG_Turret"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Snek_AmmoBelts</li>
+                            <li>FTC_TurretBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FTC_Autocannon_Turret"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>CE_TurretHeavyWeapons</li>
+                            <li>Snek_HighCaliber</li>
+                            <li>Snek_AmmoBelts</li>
+                            <li>FTC_TurretBunker</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
