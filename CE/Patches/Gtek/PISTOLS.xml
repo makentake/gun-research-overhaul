@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Set false inheritance!!!-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[
+    defName="HIDGun_P320SIG" or
+    defName="HIDGun_TECNine" or
+    defName="HIDGun_P32KelTec" or
+    defName="HIDGun_RugerLCP_Base" or
+    defName="HIDGun_YeetCannon" or
+    defName="HIDGun_Glock17S" or
+    defName="HIDGun_FiveSeven" or
+    defName="HIDGun_USP45Std"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"></researchPrerequisite>
+    </value>
+  </Operation>
+  <!--=REVOLVER=-->
+  <!--Ruger Super Redhawk-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_RugerSuperRedhawk" or
+      defName="HIDGun_RugerSuperRedhawk_22Hornet"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"></researchPrerequisite>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_RugerSuperRedhawk" or
+      defName="HIDGun_RugerSuperRedhawk_22Hornet"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_DoubleAction</li>
+        <li>Snek_Bakelite</li>
+        <li>Snek_SimpleScopes</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--Ruger LCR, Taurus Model 455 Tracker, Taurus Raging Bull 454-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_RugerLCR" or
+    defName="HIDGun_TaurusM455Tracker" or
+    defName="HIDGun_TaurusRagingBull"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"></researchPrerequisite>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_RugerLCR" or
+    defName="HIDGun_TaurusM455Tracker" or
+    defName="HIDGun_TaurusRagingBull"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_DoubleAction</li>
+        <li>Snek_Bakelite</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--Colt Python-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_ColtPython"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisite Inherit="False">Snek_DoubleAction</researchPrerequisite>
+    </value>
+  </Operation>
+  <!--=PISTOL=-->
+  <!--P320, TEC-9, P32, LCP, YC9, Glock 17, Five-SeveN, USP45, FNX-45 Tactical-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_P320SIG" or
+    defName="HIDGun_TECNine" or
+    defName="HIDGun_P32KelTec" or
+    defName="HIDGun_RugerLCP_Base" or
+    defName="HIDGun_YeetCannon" or
+    defName="HIDGun_Glock17S" or
+    defName="HIDGun_FiveSeven" or
+    defName="HIDGun_USP45Std"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>BlowbackOperation</li>
+        <li>Snek_Bakelite</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+</Patch>

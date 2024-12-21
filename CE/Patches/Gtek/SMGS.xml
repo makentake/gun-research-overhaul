@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Set False Inheritance!!!-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_MP5A2Gun" or
+    defName="HIDGun_MP5K" or
+    defName="HIDGun_AR57Gun" or
+    defName="HIDGun_MP510Gun_FBI" or
+    defName="HIDGun_CMMGMk9BANSHEE_Auto"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"></researchPrerequisite>
+    </value>
+  </Operation>
+  <!--Cold Steel Submachine Guns-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_BerettaM93R" or
+    defName="HIDGun_vz61Skorpion" or
+    defName="HIDGun_Uzi" or
+    defName="HIDGun_UziMicro" or 
+    defName="HIDGun_TommyGun"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False">Snek_SMG</researchPrerequisite>
+    </value>
+  </Operation>
+  <!--=SMG=-->
+  <!--MP5A2, MP5K-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_MP5A2Gun" or
+    defName="HIDGun_MP5K"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_SMG</li>
+        <li>Snek_Bakelite</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--AR-57, MP5/10, CMMG Banshee Mk9-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_AR57Gun" or
+    defName="HIDGun_MP510Gun_FBI" or
+    defName="HIDGun_CMMGMk9BANSHEE_Auto"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_SMG</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_SimpleNV</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+</Patch>

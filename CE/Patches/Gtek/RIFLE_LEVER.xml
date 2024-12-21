@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Marlin Model 336-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_Marlin336Model"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False">Snek_LeverAction</researchPrerequisite>
+    </value>
+  </Operation>
+</Patch>

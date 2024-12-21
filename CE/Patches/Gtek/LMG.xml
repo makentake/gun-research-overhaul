@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--=LMG=-->
+  <!--Ohio Ordnance REAPR-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_REAPR"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>PrecisionRifling</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_AdvancedNV</li>
+        <li>Snek_AmmoBelts</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--KAC LAMG-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_LAMG"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"></researchPrerequisite>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_LAMG"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>PrecisionRifling</li>
+        <li>CE_SimpleNV</li>
+        <li>Snek_Bakelite</li>
+        <li>Snek_AmmoBelts</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+</Patch>
