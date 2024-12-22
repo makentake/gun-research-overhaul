@@ -4,9 +4,8 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="HIDGun_MP5A2Gun" or
     defName="HIDGun_MP5K" or
-    defName="HIDGun_AR57Gun" or
-    defName="HIDGun_MP510Gun_FBI" or
-    defName="HIDGun_CMMGMk9BANSHEE_Auto"]/recipeMaker/researchPrerequisite</xpath>
+    defName="HIDGun_MP5KPDW" or
+    defName="HIDGun_MP5SD6Gun"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
@@ -26,7 +25,9 @@
   <!--MP5A2, MP5K-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_MP5A2Gun" or
-    defName="HIDGun_MP5K"]/recipeMaker</xpath>
+    defName="HIDGun_MP5K" or
+    defName="HIDGun_MP5KPDW" or
+    defName="HIDGun_MP5SD6Gun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_SMG</li>
@@ -34,14 +35,31 @@
       </researchPrerequisites>
     </value>
   </Operation>
-  <!--AR-57, MP5/10, CMMG Banshee Mk9-->
-  <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_AR57Gun" or
-    defName="HIDGun_MP510Gun_FBI" or
-    defName="HIDGun_CMMGMk9BANSHEE_Auto"]/recipeMaker</xpath>
+  <!--AR-57, MP5/10, CMMG Banshee Mk9, and others-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_MP510Gun_FBI" or
+    defName="HIDGun_AR57Gun" or
+    defName="HIDGun_RD9_Tactical" or
+    defName="HIDGun_RD45_Tactical" or
+    defName="HIDGun_RD300_Tactical" or
+    defName="HIDGun_CMMGMk9BANSHEE_Auto" or
+    defName="HIDGun_CMMGMk10BANSHEE_CAGE" or
+    defName="HIDGun_APC9K_Pro" or
+    defName="HIDGun_P90Gun"]/recipeMaker/researchPrerequisites</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_SMG</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_SimpleNV</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!-- Thunderbird -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_DesertEagle_Thunderbird"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>GasOperation</li>
         <li>Snek_Bakelite</li>
         <li>CE_SimpleNV</li>
       </researchPrerequisites>

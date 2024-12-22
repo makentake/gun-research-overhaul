@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <!--=LMG=-->
-  <!--Ohio Ordnance REAPR-->
+  <!--ADVANCED NV LMGs-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="HIDGun_REAPR"]/recipeMaker/researchPrerequisites</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_REAPR" or
+    defName="HIDGun_MTwoFifty_NGSW"]/recipeMaker/researchPrerequisites</xpath>
     <value>
       <researchPrerequisites>
         <li>PrecisionRifling</li>
@@ -13,21 +14,28 @@
       </researchPrerequisites>
     </value>
   </Operation>
-  <!--KAC LAMG-->
+  <!--SIMPLE NV LMGs-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="HIDGun_LAMG"]/recipeMaker/researchPrerequisite</xpath>
-    <value>
-      <researchPrerequisite Inherit="False"></researchPrerequisite>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_LAMG"]/recipeMaker</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_LAMG" or
+    defName="HIDGun_FNMinimi762MkThree"]/recipeMaker/researchPrerequisites</xpath>
     <value>
       <researchPrerequisites>
         <li>PrecisionRifling</li>
         <li>CE_SimpleNV</li>
         <li>Snek_Bakelite</li>
         <li>Snek_AmmoBelts</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--XM8 LMG (A UNICORN)-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_XM8_LMG"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>PrecisionRifling</li>
+        <li>CE_SimpleNV</li>
+        <li>Snek_Bakelite</li>
+        <li>Snek_LMG</li>
       </researchPrerequisites>
     </value>
   </Operation>
