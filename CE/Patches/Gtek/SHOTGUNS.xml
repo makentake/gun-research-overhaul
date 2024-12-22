@@ -3,45 +3,55 @@
   <!--Set False Inheritance!!!-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_M590A1Gun" or
-    defName="HIDGun_M590A1Short"]/recipeMaker</xpath>
+    defName="HIDGun_M590A1Short" or
+    defName="HIDGun_Savage42Takedown" or
+    defName="HIDGun_M590_ThunderRanch" or
+    defName="HIDGun_RemingtonM870Gun_Tactical" or
+    defName="HIDGun_Maverick88Gun" or
+    defName="HIDGun_RemingtonTac14Gun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="HIDGun_SPAS12Gun" or
+    defName="HIDGun_SPAS12Stockless" or
     defName="HIDGun_RemingtonSP10Gun" or
     defName="HIDGun_M1014Gun" or
     defName="HIDGun_SA_RenSec" or
-    defName="HIDGun_AA12Gun"]/recipeMaker/researchPrerequisite</xpath>
+    defName="HIDGun_SA_RenComp" or
+    defName="HIDGun_AA12Gun" or
+    defName="HIDGun_RemingtonM870Gun_Cantilever" or
+    defName="HIDGun_Savage220XP"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
   </Operation>
-  <!--Browning BSS, IZh-18-->
+  <!--Browning BSS, IZh-18, and other break actions-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_BrowningBSS" or
-    defName="HIDGun_IZh18Baikal"]/recipeMaker</xpath>
+    defName="HIDGun_IZh18Baikal" or
+    defName="HIDGun_StoegerCoachGun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False">Snek_BreakAction</researchPrerequisite>
     </value>
   </Operation>
-  <!--M590A1-->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_M590A1Gun" or
-    defName="HIDGun_M590A1Short"]/recipeMaker</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_Savage42Takedown"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
-        <li>Snek_PumpAction</li>
+        <li>Snek_BreakAction</li>
         <li>Snek_Bakelite</li>
       </researchPrerequisites>
     </value>
   </Operation>
-  <!--SPAS-12, M1014, Savage Renegauge Security-->
+  <!--SPAS-12, M1014, Savage Renegauge Security/Competition-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_SPAS12Gun" or
+    defName="HIDGun_SPAS12Stockless" or
     defName="HIDGun_M1014Gun" or
-    defName="HIDGun_SA_RenSec"]/recipeMaker</xpath>
+    defName="HIDGun_SA_RenSec" or
+    defName="HIDGun_SA_RenComp"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_Shotguns</li>
@@ -50,26 +60,48 @@
       </researchPrerequisites>
     </value>
   </Operation>
-  <!--Remington M870 Fieldmaster-->
+  <!--Remington M870 Fieldmaster and other wood-framed pump shotguns-->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM870Gun"]/recipeMaker</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM870Gun" or
+    defName="HIDGun_M590A1Retro" or
+    defName="HIDGun_RemingtonM870Gun_HomeDefense"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False">Snek_PumpAction</researchPrerequisite>
     </value>
   </Operation>
-  <!--Remington M870 Tactical-->
+  <!--Remington M870 Tactical and other polymer pump-actions-->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM870Gun_Tactical"]/recipeMaker</xpath>
-    <value>
-      <researchPrerequisite Inherit="False"></researchPrerequisite>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM870Gun_Tactical"]/recipeMaker</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM870Gun_Tactical" or
+    defName="HIDGun_Maverick88Gun" or
+    defName="HIDGun_M590A1Gun" or
+    defName="HIDGun_M590A1Short" or
+    defName="HIDGun_M590_ThunderRanch" or
+    defName="HIDGun_RemingtonTac14Gun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_PumpAction</li>
         <li>Snek_Bakelite</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--tactical pump shotguns-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_TacOrdM870Gun_Operator"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_PumpAction</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_SimpleNV</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonSP10Custom"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_Bakelite</li>
+        <li>GasOperation</li>
+        <li>CE_AdvancedNV</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -106,6 +138,27 @@
     <xpath>Defs/ThingDef[defName="HIDGun_REV410Sgun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite>Snek_DoubleAction</researchPrerequisite>
+    </value>
+  </Operation>
+  <!-- silly rifled shotguns -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM870Gun_Cantilever"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_PumpAction</li>
+        <li>Snek_SimpleScopes</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--BOLT-ACTION-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_Savage220XP"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_BoltAction</li>
+        <li>Snek_Bakelite</li>
+        <li>Snek_SimpleScopes</li>
+      </researchPrerequisites>
     </value>
   </Operation>
 </Patch>
