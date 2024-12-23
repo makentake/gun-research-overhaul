@@ -8,7 +8,8 @@
     defName="HIDGun_M590_ThunderRanch" or
     defName="HIDGun_RemingtonM870Gun_Tactical" or
     defName="HIDGun_Maverick88Gun" or
-    defName="HIDGun_RemingtonTac14Gun"]/recipeMaker</xpath>
+    defName="HIDGun_RemingtonTac14Gun" or
+    defName="HIDGun_BPS10Field"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
@@ -76,7 +77,8 @@
     defName="HIDGun_M590A1Gun" or
     defName="HIDGun_M590A1Short" or
     defName="HIDGun_M590_ThunderRanch" or
-    defName="HIDGun_RemingtonTac14Gun"]/recipeMaker</xpath>
+    defName="HIDGun_RemingtonTac14Gun" or
+    defName="HIDGun_BPS10Field"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_PumpAction</li>

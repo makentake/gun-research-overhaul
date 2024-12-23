@@ -1,10 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!--Marlin Model 336-->
+  <!--Marlin Model 336 and other wood guns-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="HIDGun_Marlin336Model"]/recipeMaker/researchPrerequisite</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_Marlin336Model" or
+    defName="HIDGun_WinchesterRanger"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False">Snek_LeverAction</researchPrerequisite>
+    </value>
+  </Operation>
+
+  <!--S&W Model 1854-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_SW1854_Traditional"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"/>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_SW1854_Traditional"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_LeverAction</li>
+        <li>Snek_SimpleScopes</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+
+  <!-- TACTICAL LEVER GUNS -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_Marlin336Model_Dark" or
+    defName="HIDGun_SW1854_SF"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_LeverAction</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_SimpleNV</li>
+      </researchPrerequisites>
     </value>
   </Operation>
 </Patch>
