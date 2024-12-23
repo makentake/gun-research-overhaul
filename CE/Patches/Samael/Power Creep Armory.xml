@@ -252,7 +252,7 @@
                     </value>
             </li>
             <!-- Charge HHMG -->
-            <li Class="PatchOperationReplace">
+            <!--<li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="PCA_Gun_ChargeHHMG"]/recipeMaker/researchPrerequisites</xpath>
                     <value>
                         <researchPrerequisites>
@@ -262,7 +262,7 @@
                             <li>Snek_AmmoBelts</li>
                         </researchPrerequisites>
                     </value>
-            </li>
+            </li>-->
             <!-- Charge AAMR -->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="PCA_Gun_ChargeAAMR"]/recipeMaker/researchPrerequisites</xpath>
