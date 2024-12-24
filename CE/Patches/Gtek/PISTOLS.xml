@@ -16,6 +16,7 @@
     </value>
   </Operation>
   <!--=REVOLVER=-->
+  <!--Ruger Vaqero is already good-->
   <!--Ruger Super Redhawk-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_RugerSuperRedhawk" or
@@ -39,7 +40,10 @@
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_RugerLCR" or
     defName="HIDGun_TaurusM455Tracker" or
-    defName="HIDGun_TaurusRagingBull"]/recipeMaker</xpath>
+    defName="HIDGun_TaurusM455TrackerGold" or
+    defName="HIDGun_TaurusRagingBull" or
+    defName="HIDGun_TaurusRagingBull_Blued" or
+    defName="HIDGun_SW686Gun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
@@ -47,7 +51,10 @@
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_RugerLCR" or
     defName="HIDGun_TaurusM455Tracker" or
-    defName="HIDGun_TaurusRagingBull"]/recipeMaker</xpath>
+    defName="HIDGun_TaurusM455TrackerGold" or
+    defName="HIDGun_TaurusRagingBull" or
+    defName="HIDGun_TaurusRagingBull_Blued" or
+    defName="HIDGun_SW686Gun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_DoubleAction</li>
@@ -57,7 +64,8 @@
   </Operation>
   <!--Colt Python-->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_ColtPython"]/recipeMaker</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_ColtPython" or
+    defName="HIDGun_ColtPythonBlued"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False">Snek_DoubleAction</researchPrerequisite>
     </value>
