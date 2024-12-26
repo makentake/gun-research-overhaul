@@ -62,10 +62,11 @@
       </researchPrerequisites>
     </value>
   </Operation>
-  <!--Colt Python-->
+  <!--Colt Python and other wood framed double actions-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_ColtPython" or
-    defName="HIDGun_ColtPythonBlued"]/recipeMaker</xpath>
+    defName="HIDGun_ColtPythonBlued" or
+    defName="HIDGun_SW36Gun"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False">Snek_DoubleAction</researchPrerequisite>
     </value>
