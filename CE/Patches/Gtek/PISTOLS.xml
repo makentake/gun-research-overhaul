@@ -10,7 +10,12 @@
     defName="HIDGun_YeetCannon" or
     defName="HIDGun_Glock17S" or
     defName="HIDGun_FiveSeven" or
-    defName="HIDGun_USP45Std"]/recipeMaker/researchPrerequisite</xpath>
+    defName="HIDGun_USP45Std" or
+    defName="HIDGun_CZP07_Gun" or
+    defName="HIDGun_RD9Pistol" or
+    defName="HIDGun_RD45Pistol" or
+    defName="HIDGun_RD300Pistol" or
+    defName="HIDGun_P365SIG"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
@@ -71,6 +76,15 @@
       <researchPrerequisite Inherit="False">Snek_DoubleAction</researchPrerequisite>
     </value>
   </Operation>
+  <!--ADVANCED REVOLVERS-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_SW442Gun_CrimsonTrace"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <li>Snek_DoubleAction</li>
+      <li>Snek_Bakelite</li>
+      <li>CE_AdvancedNV</li>
+    </value>
+  </Operation>
   <!--=PISTOL=-->
   <!--P320, TEC-9, P32, LCP, YC9, Glock 17, Five-SeveN, USP45, FNX-45 Tactical-->
   <Operation Class="PatchOperationAdd">
@@ -81,7 +95,12 @@
     defName="HIDGun_YeetCannon" or
     defName="HIDGun_Glock17S" or
     defName="HIDGun_FiveSeven" or
-    defName="HIDGun_USP45Std"]/recipeMaker</xpath>
+    defName="HIDGun_USP45Std" or
+    defName="HIDGun_CZP07_Gun" or
+    defName="HIDGun_RD9Pistol" or
+    defName="HIDGun_RD45Pistol" or
+    defName="HIDGun_RD300Pistol" or
+    defName="HIDGun_P365SIG"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>BlowbackOperation</li>
@@ -89,4 +108,21 @@
       </researchPrerequisites>
     </value>
   </Operation>
+  <!--TACTICAL PISTOLS-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_P320SIG_SPECTRE"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <li>BlowbackOperation</li>
+      <li>Snek_Bakelite</li>
+      <li>CE_SimpleNV</li>
+    </value>
+  </Operation>
+  <!--ADVANCED PISTOLS-->
+  <!--<Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_BerettaM9A3Gun"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <li>BlowbackOperation</li>
+      <li>CE_AdvancedNV</li>
+    </value>
+  </Operation>-->
 </Patch>
