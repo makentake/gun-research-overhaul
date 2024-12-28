@@ -8,14 +8,17 @@
     defName="HIDGun_P32KelTec" or
     defName="HIDGun_RugerLCP_Base" or
     defName="HIDGun_YeetCannon" or
-    defName="HIDGun_Glock17S" or
+    defName="HIDGun_Glock17S_Base" or
     defName="HIDGun_FiveSeven" or
     defName="HIDGun_USP45Std" or
     defName="HIDGun_CZP07_Gun" or
     defName="HIDGun_RD9Pistol" or
     defName="HIDGun_RD45Pistol" or
     defName="HIDGun_RD300Pistol" or
-    defName="HIDGun_P365SIG"]/recipeMaker/researchPrerequisite</xpath>
+    defName="HIDGun_P365SIG" or
+    defName="HIDGun_RugerP345_Base" or
+    defName="HIDGun_RugerSR9_Base" or
+    defName="HIDGun_Glock19S"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
@@ -86,21 +89,24 @@
     </value>
   </Operation>
   <!--=PISTOL=-->
-  <!--P320, TEC-9, P32, LCP, YC9, Glock 17, Five-SeveN, USP45, FNX-45 Tactical-->
+  <!--P320, TEC-9, P32, LCP, YC9, Glock 17, Five-SeveN, USP45, FNX-45 Tactical, other basic polymer framed pistols-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_P320SIG" or
     defName="HIDGun_TECNine" or
     defName="HIDGun_P32KelTec" or
     defName="HIDGun_RugerLCP_Base" or
     defName="HIDGun_YeetCannon" or
-    defName="HIDGun_Glock17S" or
+    defName="HIDGun_Glock17S_Base" or
     defName="HIDGun_FiveSeven" or
     defName="HIDGun_USP45Std" or
     defName="HIDGun_CZP07_Gun" or
     defName="HIDGun_RD9Pistol" or
     defName="HIDGun_RD45Pistol" or
     defName="HIDGun_RD300Pistol" or
-    defName="HIDGun_P365SIG"]/recipeMaker</xpath>
+    defName="HIDGun_P365SIG" or
+    defName="HIDGun_RugerP345_Base" or
+    defName="HIDGun_RugerSR9_Base" or
+    defName="HIDGun_Glock19S"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>BlowbackOperation</li>
@@ -110,7 +116,9 @@
   </Operation>
   <!--TACTICAL PISTOLS-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="HIDGun_P320SIG_SPECTRE"]/recipeMaker/researchPrerequisites</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_P320SIG_SPECTRE" or
+    defName="HIDGun_RugerMkIV_lite" or
+    defName="HIDGun_Glock19S_MOS"]/recipeMaker/researchPrerequisites</xpath>
     <value>
       <li>BlowbackOperation</li>
       <li>Snek_Bakelite</li>
