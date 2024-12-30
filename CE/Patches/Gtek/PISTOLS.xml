@@ -2,8 +2,7 @@
 <Patch>
   <!--Set false inheritance!!!-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[
-    defName="HIDGun_P320SIG" or
+    <xpath>Defs/ThingDef[defName="HIDGun_P320SIG" or
     defName="HIDGun_TECNine" or
     defName="HIDGun_P32KelTec" or
     defName="HIDGun_RugerLCP_Base" or
@@ -18,13 +17,17 @@
     defName="HIDGun_P365SIG" or
     defName="HIDGun_RugerP345_Base" or
     defName="HIDGun_RugerSR9_Base" or
-    defName="HIDGun_Glock19S"]/recipeMaker/researchPrerequisite</xpath>
+    defName="HIDGun_Glock19S" or
+    defName="HIDGun_USP9Match" or
+    defName="HIDGun_SavageStance" or
+    defName="HIDGun_WaltherPDP_Compact_Base" or
+    defName="HIDGun_WaltherP22Q" or
+    defName="HIDGun_WaltherPPQ"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
   </Operation>
   <!--=REVOLVER=-->
-  <!--Ruger Vaqero is already good-->
   <!--Ruger Super Redhawk-->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_RugerSuperRedhawk" or
@@ -83,9 +86,11 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="HIDGun_SW442Gun_CrimsonTrace"]/recipeMaker/researchPrerequisites</xpath>
     <value>
-      <li>Snek_DoubleAction</li>
-      <li>Snek_Bakelite</li>
-      <li>CE_AdvancedNV</li>
+      <researchPrerequisites>
+        <li>Snek_DoubleAction</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_AdvancedNV</li>
+      </researchPrerequisites>
     </value>
   </Operation>
   <!--=PISTOL=-->
@@ -106,7 +111,12 @@
     defName="HIDGun_P365SIG" or
     defName="HIDGun_RugerP345_Base" or
     defName="HIDGun_RugerSR9_Base" or
-    defName="HIDGun_Glock19S"]/recipeMaker</xpath>
+    defName="HIDGun_Glock19S" or
+    defName="HIDGun_USP9Match" or
+    defName="HIDGun_SavageStance" or
+    defName="HIDGun_WaltherPDP_Compact_Base" or
+    defName="HIDGun_WaltherP22Q" or
+    defName="HIDGun_WaltherPPQ"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>BlowbackOperation</li>
@@ -126,11 +136,22 @@
     </value>
   </Operation>
   <!--ADVANCED PISTOLS-->
-  <!--<Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="HIDGun_BerettaM9A3Gun"]/recipeMaker/researchPrerequisites</xpath>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_USP45Tactical"]/recipeMaker/researchPrerequisites</xpath>
     <value>
-      <li>BlowbackOperation</li>
-      <li>CE_AdvancedNV</li>
+      <researchPrerequisites>
+        <li>BlowbackOperation</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_AdvancedNV</li>
+      </researchPrerequisites>
     </value>
-  </Operation>-->
+  </Operation>
+  <!--BREAK ACTION-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_PowellKnifePistol" or
+    defName="HIDGun_AmDerringerM4Alaskan"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisite Inherit="False">Snek_BreakAction</researchPrerequisite>
+    </value>
+  </Operation>
 </Patch>
