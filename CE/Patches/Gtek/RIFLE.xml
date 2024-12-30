@@ -404,13 +404,15 @@
   </Operation>
   <!--Springfield Model 2020 Waypoint-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="HIDGun_SpringfieldM2020W"]/recipeMaker/researchPrerequisite</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_SpringfieldM2020W" or
+    defName="HIDGun_SpringfieldM2020R"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_SpringfieldM2020W"]/recipeMaker</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_SpringfieldM2020W" or
+    defName="HIDGun_SpringfieldM2020R"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_BoltAction</li>
