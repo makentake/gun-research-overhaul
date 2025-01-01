@@ -575,6 +575,23 @@
       </researchPrerequisites>
     </value>
   </Operation>
+  <!--Remington M700 SPS-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_SPS"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"></researchPrerequisite>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_SPS"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_BoltAction</li>
+        <li>Snek_Bakelite</li>
+        <li>Snek_ModernScopes</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
   <!--=ANTI-MATERIEL RIFLE=-->
   <!--Barrett M82A1-->
   <Operation Class="PatchOperationReplace">
