@@ -559,13 +559,15 @@
   </Operation>
   <!--Remington M700 CDL-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_CDL"]/recipeMaker/researchPrerequisite</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_CDL" or
+    defName="HIDGun_RemingtonM700_CDL_SF"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_CDL"]/recipeMaker</xpath>
+    <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_CDL" or
+    defName="HIDGun_RemingtonM700_CDL_SF"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_BoltAction</li>
