@@ -578,14 +578,16 @@
   <!--Remington M700 SPS-->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_SPS" or
-    defName="HIDGun_RemingtonM700_SPS_Tactical"]/recipeMaker/researchPrerequisite</xpath>
+    defName="HIDGun_RemingtonM700_SPS_Tactical" or
+    defName="HIDGun_RemingtonM700_SPS_Tactical_Threaded"]/recipeMaker/researchPrerequisite</xpath>
     <value>
       <researchPrerequisite Inherit="False"></researchPrerequisite>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_RemingtonM700_SPS" or
-    defName="HIDGun_RemingtonM700_SPS_Tactical"]/recipeMaker</xpath>
+    defName="HIDGun_RemingtonM700_SPS_Tactical" or
+    defName="HIDGun_RemingtonM700_SPS_Tactical_Threaded"]/recipeMaker</xpath>
     <value>
       <researchPrerequisites>
         <li>Snek_BoltAction</li>
