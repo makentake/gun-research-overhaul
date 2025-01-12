@@ -82,6 +82,17 @@
       <researchPrerequisite Inherit="False">Snek_DoubleAction</researchPrerequisite>
     </value>
   </Operation>
+  <!--TACTICAL REVOLVERS-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_SWR8Revolver"]/recipeMaker/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>Snek_DoubleAction</li>
+        <li>Snek_Bakelite</li>
+        <li>CE_SimpleNV</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
   <!--ADVANCED REVOLVERS-->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="HIDGun_SW442Gun_CrimsonTrace"]/recipeMaker/researchPrerequisites</xpath>

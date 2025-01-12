@@ -32,7 +32,8 @@
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HIDGun_BrowningBSS" or
     defName="HIDGun_IZh18Baikal" or
-    defName="HIDGun_StoegerCoachGun"]/recipeMaker</xpath>
+    defName="HIDGun_StoegerCoachGun" or
+    defName="HIDGun_ChiappaTripleThreat"]/recipeMaker</xpath>
     <value>
       <researchPrerequisite Inherit="False">Snek_BreakAction</researchPrerequisite>
     </value>
