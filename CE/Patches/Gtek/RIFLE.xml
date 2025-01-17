@@ -339,6 +339,22 @@
       </researchPrerequisites>
     </value>
   </Operation>
+  <!-- Zastava M76 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HIDGun_M76Zastava"]/recipeMaker/researchPrerequisite</xpath>
+    <value>
+      <researchPrerequisite Inherit="False"></researchPrerequisite>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HIDGun_M76Zastava"]/recipeMaker</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>GasOperation</li>
+        <li>Snek_ModernScopes</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
   <!--Zastava M77-->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="HIDGun_M77Zastava"]/recipeMaker/researchPrerequisite</xpath>
